@@ -1,0 +1,69 @@
+<div class="container">
+  <header class="py-3 mb-4 shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center">
+      <img src="assets/logo.png" alt="Logo" class="logo mr-3">
+      <h5 class="logo-text">task master ai</h5>
+      <nav class="nav">
+        <a class="nav-link" routerLink="/Login">Login</a>
+        <a class="nav-link" routerLink="/about">About Us</a>
+        <a class="nav-link" routerLink="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="row chat-div">
+      <section class="col-sm-9">
+        <div class="section-1">
+          <h5 class="fst-italic">Plan your task!</h5>
+        </div>
+        <div class="card p-3 border border-success parent-div d-flex flex-column" style="height: 60vh;">
+          <div id="chatContainer" class="container overflow-auto" style="flex-grow: 1;" #chatContainer>
+            <div *ngFor="let item of chatHistory" class="mb-3">
+              <div class="card text-end p-2 mb-1 question-card">
+                <p class="mb-0"><strong></strong> {{ item.question }}</p>
+              </div>
+              <div class="card text-white text-start p-2 answer-card">
+                <p class="mb-0">
+                  <i class="fas fa-robot me-2"></i>
+                  <strong>:</strong> {{ item.answer }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-3">
+            <label for="userQuestion" class="form-label"></label>
+            <div class="textarea-container">
+              <textarea
+                id="userQuestion"
+                class="form-control form-control-lg rounded-3 shadow-sm"
+                rows="2"
+                placeholder="Type your question here..."
+                [(ngModel)]="userQuestion"
+                (keydown.enter)="submitQuestion()"
+              ></textarea>
+              <div class="send-button-container">
+                <button class="btn btn-sm button" (click)="submitQuestion()">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-3">
+        <h5 class="section-1">Saved Plans:</h5>
+        <div class="saved-chats-container">
+          <div *ngFor="let savedChat of getSavedChats()" class="card border saved-plan-row">
+            <a href="/">
+              <p class="saved-chat-text">{{ savedChat }}</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="text-center mt-4">
+    <p>&copy; 2025 My Angular App</p>
+  </footer>
+</div>
