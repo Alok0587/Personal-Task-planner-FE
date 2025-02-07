@@ -1,0 +1,57 @@
+::placeholder {
+  font-size: 0.875rem;
+  color: rgba(9, 121, 113, 1); /* Adjust the size as needed */
+}
+
+.question-card {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: 0;
+  background: rgba(0, 212, 255, 1);
+}
+
+.answer-card {
+  width: 75%;
+  margin-left: 0;
+  margin-right: auto;
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 121, 113, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.section-1 {
+  color: rgba(9, 121, 113, 1);
+}
+
+.chat-div {
+  padding: 1em;
+}
+
+.textarea-container {
+  position: relative; /* Required for absolute positioning of the button */
+  width: 100%; /* Adjust as needed */
+}
+
+textarea {
+  width: 100%;
+  padding-right: 80px; /* Add padding to prevent text from overlapping the button */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.send-button-container {
+  position: absolute;
+  bottom: 10px; /* Adjust distance from the bottom */
+  right: 10px; /* Adjust distance from the right */
+}
+
+.button {
+  background-color: rgba(0, 212, 255, 1); /* Example button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}

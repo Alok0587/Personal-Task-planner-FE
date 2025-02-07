@@ -1,0 +1,50 @@
+.saved-plan-row {
+  display: flex;
+  padding: 5px 0 0 5px;
+  color: white;
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 121, 113, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.saved-chats-container {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: rgba(9, 121, 113, 1);
+}
+
+.saved-plan-row {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px;
+  background-color: #444;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.saved-plan-row:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.saved-chat-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+}
+
+.saved-plan-row a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.saved-plan-row a:hover {
+  text-decoration: none;
+}
